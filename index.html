@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>GCSCOBRO</title>
+</head>
+
+<body>
+  <!-- BARRA DE NAVEGACION -->
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <div class="col-md-5">
+      <span class="fs-4 fw-bold">CREDISOFT</span>
+    </div>
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#soporte" class="nav-link">Soporte tecnico</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="row mx-0">
+    <div class="col-md-6">
+      <!-- LOGIN -->
+      <div class="container py-5 mb-5">
+        <div class="mx-auto py-5 px-4 w-100 login">
+          <div class="container-sm p-3 text-center">
+            <h3 class="fw-bold mb-4">Iniciar sesión</h3>
+            <form id="AdminForm" name="AdminForm" method="post" action="login.php" novalidate="novalidate">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Identificacion" name="base" id="base" aria-label="Identificacion">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Usuario" name="nick" id="nick" aria-label="Usuario">
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Contraseña" name="clave" id="clave" aria-label="Contraseña">
+              </div>
+
+              <div class="d-flex justify-content-between gap-1">
+                <button type="submit" class="btn btn-sm btn-primary" value="Enviar">Enviar</button>
+                <div class="d-flex">
+                  <button type="button" onclick="rutas()"  class="btn btn-sm btn-primary">Pago Rutas</button>
+                  <button type="button" onclick="rutasmsg" class="btn btn-sm btn-primary ms-1">Pago Mensajes</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN LOGIN -->
+
+    <div class="col-md-6">
+      <div class="container px-4 py-3">
+        <h2 class="border-bottom fw-bold text-center py-2 bg-secondary-subtle">Servicios</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 py-5">
+
+          <div class="col-md-6">
+            <div class="d-flex flex-column align-items-start gap-2 h-100">
+              <h2 class="fs-2 text-body-emphasis">Paquete de mensajeria de texto</h2>
+              <p class="mb-0">Fragresia se complace en anunciar que ahora puede adquirir paquetes de mensajería de texto
+                através de
+                nuestra plataforma<button class="button" id="btn_ver_mas">...Ver mas</button>
+              </p>
+              <span class="ocultar" id="span_text">
+                <p>
+                  Esta funcionalidad le permitirá enviar automaticamente mensajes de texto a
+                  sus clientes en el momento en que realicen un credito. <br>
+                  <strong>Ejemplo:</strong> <br>
+                  Recibirá un mensaje de indicando: 'Ha realizado un credito por <strong>[VALOR]</strong>.
+                  En caso contrario, por favor, llame al siguiente numero: <strong>[xxxx]</strong>'<br>
+
+                  Además, cada vez que sus clientes realicen un abono, también recibirán un mensaje de texto para
+                  mantenerlos informados. Simplifique la comunicación y mejore la interacción con sus clientes
+                  mediante nuestro servicio de mensajeria integrada.<button class="button" id="btn_ver_menos">Ver
+                    menos</button>
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="col h-100 d-flex align-items-start">
+              <div
+                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#cpu-fill" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="fs-2 text-body-emphasis">Modulo Exclusivo</h3>
+                <p>Descubre nuestro nuevo módulo exclusivo para cobradores y realice su ruta con un listado de clientes.
+                </p>
+                <a href="#" class="btn btn-primary">Primary button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container border-top" id="soporte">
+    <footer class="pt-2">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <h3>Soporte Tecnico</h3>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">Juan Gabriel Zapata</li>
+            <li class="nav-item mb-2">+57 3113234990</li>
+            <li class="nav-item mb-2">+57 3128435703</li>
+            <li class="nav-item mb-2">zajuga@gmail.com</li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <h3>Soporte Remoto</h3>
+          <p>Descarga TeamViewer para soporte remoto aquí.</p>
+          <button class="btn btn-primary" type="button">Descarga</button>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-center py-2  border-top">
+        <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
+  <script src="/script.js"></script>
+
+</body>
+
+</html>

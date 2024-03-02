@@ -1,0 +1,32 @@
+header{
+  position: sticky; 
+  background-color: rgb(255, 255, 255) !important; 
+  top: -1px;
+  z-index: 20;
+  box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.00)
+}
+
+.login{
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.00);
+  border-radius: 10px;
+}
+
+
+.button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.ocultar{
+  display: none;
+}
+
+.mostrar{
+  display: block;
+}
